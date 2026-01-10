@@ -79,46 +79,51 @@ p {
 }
 
 /*banner da pagina*/
-.banner_da_pagina {
+.page-banner {
     display: flex;
     justify-content: center;
     align-items: center;
     margin: auto;
-    border: 1px red solid;
     padding: 4px;
     gap: 6px;
 }
 
 /*imagem da logo do banner*/
-.banner_logo {
+.logo-banner {
     width: 100px;
     height: 100px;
     object-fit: contain;
 }
 
 /*texto do banner da pagina*/
-.banner_texto {
+.text-banner {
     color: var(--texto-destaque);
     letter-spacing: 0.1rem;
 }
 
-.banner_texto h1 {
+.text-banner h1 {
     text-align: center;
 }
 
-.banner_texto p {
+.text-banner p {
     text-align: center;
     font-size: 1.2rem;
 }
 
-.secao_1 {
-    margin-top:80px;
+.section-1 {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 /*adicionar efeito de sombra em textos*/
-.shadow_efect {
+.shadow-effect {
     text-shadow: 0.08rem 0.08rem 0.09rem black;
+}
+
+/*aviso de manutencao*/
+.maintenance-notice {
+    padding-top: 6rem;
+    border-bottom: solid;
+    font-size: 1.2rem;
 }
