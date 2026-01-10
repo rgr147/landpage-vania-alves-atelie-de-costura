@@ -1,0 +1,124 @@
+/*paleta de cores do projeto*/
+:root {
+    --bg: #F9F7F2;
+    /* --bg: purple; */
+    --texto-destaque: #CBAA65;
+}
+
+/*reset basico da pagina*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    background-color: var(--bg);
+}
+body::before {
+    content: "";
+    position:absolute;
+    inset: 0;
+
+    background-image: url(../img/textura_tecido_liso.jpg);
+    background-repeat: repeat;
+    background-size: cover;
+    background-position: top left;
+
+    opacity: 0.25;
+    pointer-events: none;
+    z-index: -1;
+}
+/*fim do reset da pagina*/
+
+h1, h2 {
+    font-family: 'Playfair Display';
+    font-size: 2.25rem;
+    font-weight: 700;
+}
+
+/*textos de paragrafos e descricoes*/
+p {
+    font-family: 'Lato';
+    font-size: 1.05rem;
+    font-weight: 400;
+}
+
+
+/*cores secundarias*/
+.menu, .btn, .act-calls  {
+    font-family: 'Montserrat';
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #6d2e46;
+}
+
+/*icones links e detalhes decorativos*/
+.realce {
+    font-family: 'Raleway';
+    font-size: 1.125rem;
+    font-weight: 500;
+    color: #50c878;
+}
+
+/*container com todo conteudo da pagina*/
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 24px 24px;
+    
+    display: flex;
+    flex-direction: column;
+}
+
+/*banner da pagina*/
+.banner_da_pagina {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    border: 1px red solid;
+    padding: 4px;
+    gap: 6px;
+}
+
+/*imagem da logo do banner*/
+.banner_logo {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+
+/*texto do banner da pagina*/
+.banner_texto {
+    color: var(--texto-destaque);
+    letter-spacing: 0.1rem;
+}
+
+.banner_texto h1 {
+    text-align: center;
+}
+
+.banner_texto p {
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.secao_1 {
+    margin-top:80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*adicionar efeito de sombra em textos*/
+.shadow_efect {
+    text-shadow: 0.08rem 0.08rem 0.09rem black;
+}
