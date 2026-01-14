@@ -1,8 +1,10 @@
 /*paleta de cores do projeto*/
 :root {
-    --bg: #F9F7F2;
-    /* --bg: purple; */
-    --texto-destaque: #CBAA65;
+    --cor-fundo: #F9F7F2;
+    --cor-h1: #CAAB65;
+    --cor-h2: var(--cor-h1);
+    --cor-textos: #373216;
+    --cor-botoes: #BA9E68;
 }
 
 /*reset basico da pagina*/
@@ -18,112 +20,90 @@ html {
 *, *::before, *::after {
     box-sizing: inherit;
 }
+/*fim do reset da pagina*/
 
 body {
-    background-color: var(--bg);
+    background-color: var(--cor-fundo);
 }
+
+/*adicionando a imagem de fundo na secao noiva*/
 body::before {
     content: "";
     position:absolute;
     inset: 0;
 
-    background-image: url(../img/textura_tecido_liso.jpg);
+    background-image: url(../img/textura-noiva.png);
     background-repeat: repeat;
     background-size: cover;
     background-position: top left;
 
-    opacity: 0.25;
+    opacity: 1;
     pointer-events: none;
     z-index: -1;
-}
-/*fim do reset da pagina*/
-
-h1, h2 {
-    font-family: 'Playfair Display';
-    font-size: 2.25rem;
-    font-weight: 700;
-}
-
-/*textos de paragrafos e descricoes*/
-p {
-    font-family: 'Lato';
-    font-size: 1.05rem;
-    font-weight: 400;
-}
-
-
-/*cores secundarias*/
-.menu, .btn, .act-calls  {
-    font-family: 'Montserrat';
-    font-size: 1.25rem;
-    font-weight: 600;
-    color: #6d2e46;
-}
-
-/*icones links e detalhes decorativos*/
-.realce {
-    font-family: 'Raleway';
-    font-size: 1.125rem;
-    font-weight: 500;
-    color: #50c878;
 }
 
 /*container com todo conteudo da pagina*/
 .container {
+    display: flex;
+    flex-direction: column;
     max-width: 1100px;
     margin: 0 auto;
     padding: 24px 24px;
-    
-    display: flex;
-    flex-direction: column;
 }
 
-/*banner da pagina*/
-.page-banner {
+/*banner*/
+.banner {
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     margin: auto;
-    padding: 4px;
-    gap: 6px;
+    padding: 0.25rem;
+    gap: 0.1rem;
+
+    border: solid 1px blue;
 }
 
 /*imagem da logo do banner*/
-.logo-banner {
+.image-banner {
     width: 100px;
-    height: 100px;
     object-fit: contain;
+
+    border: solid 1px yellow;
 }
 
 /*texto do banner da pagina*/
 .text-banner {
-    color: var(--texto-destaque);
-    letter-spacing: 0.1rem;
-}
-
-.text-banner h1 {
-    text-align: center;
-}
-
-.text-banner p {
-    text-align: center;
-    font-size: 1.2rem;
-}
-
-.section-1 {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
+    height: 100px;
+
+    border: solid 1px red;
 }
 
-/*adicionar efeito de sombra em textos*/
-.shadow-effect {
-    text-shadow: 0.08rem 0.08rem 0.09rem black;
+.titulo {
+    color: var(--cor-h1);
+    letter-spacing: 0.1rem;
+    text-shadow: 0.03rem 0.03rem 0.04rem black;
 }
 
-/*aviso de manutencao*/
-.maintenance-notice {
-    padding-top: 6rem;
-    border-bottom: solid;
-    font-size: 1.2rem;
+.titulo-h1 {
+    font-family: 'Playfair Display';
+    font-size: 2.5rem;
+    font-weight: 700;
 }
+
+.titulo-h2 {
+    font-family: 'Lato';
+    font-weight: 400;
+}
+
+.section {
+    display: flex;
+    height: 100vh;
+
+    border: solid 1px green;
+}
+
