@@ -1,13 +1,28 @@
 /*paleta de cores do projeto*/
 :root {
-    --cor-fundo: #F9F7F2;
-    --cor-h1: #CAAB65;
+    --bg: #F9F7F2;
+    --text: #2B2B2B;
+    --text-soft: #4A4A4A;
+    --gold: #B08D57;
+    --gold-soft: #D9C7B0;
+
+    --card: rgba(255, 255, 255, 0.78);
+    --shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+    --radius: 14px;
+
+    --space-1: 8px;
+    --space-2: 14px;
+    --space-3: 22px;
+    --space-4: 32px;
+
+    
+    /* --cor-h1: #CAAB65;
     --cor-h2: var(--cor-h1);
     --cor-titulos-secundarios: #4A4A4A;
-    --cor-botoes: #BA9E68;
+    --cor-botoes: #BA9E68; */
 }
 
-/*reset basico da pagina*/
+/*inicio reset basico da pagina*/
 * {
     margin: 0;
     padding: 0;
@@ -20,16 +35,20 @@ html {
 *, *::before, *::after {
     box-sizing: inherit;
 }
-/*fim do reset da pagina*/
+/*final reset da pagina*/
 
 body {
-    background-color: var(--cor-fundo);
+    background-color: var(--bg);
+    font-family: "Lato", sans-serif;
+    color: var(--text);
+    min-height: 100vh;
+    /* position: relative; */
 }
 
 /*adicionando a imagem de fundo na secao noiva*/
 body::before {
     content: "";
-    position:absolute;
+    position: absolute;
     inset: 0;
 
     background-image: url(../img/textura-noiva.png);
@@ -39,7 +58,17 @@ body::before {
 
     opacity: 1;
     pointer-events: none;
+    z-index: -2;
+}
+
+body::after {
+    content:"";
+    position: absolute;
+    inset: 0;
+    background: rgb(249, 247, 242, 0.78);
+    opacity: 0.4;
     z-index: -1;
+    pointer-events: none;
 }
 
 /*container com todo conteudo da pagina*/
@@ -48,7 +77,17 @@ body::before {
     flex-direction: column;
     max-width: 1100px;
     margin: 0 auto;
-    padding: 24px 24px;
+    padding: 28px 20px;
+}
+
+.section {
+    display: flex;
+    min-height: 100svh;
+    flex-direction: column;
+    gap: var(--space-4);
+    padding: 10px 0;
+
+    border: solid 1px green;
 }
 
 /*banner*/
@@ -57,19 +96,17 @@ body::before {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin: auto;
-    padding: 0.25rem;
-    gap: 0.1rem;
-
+    /* margin: auto; */
+    /* padding: 0.25rem; */
+    gap: var(--space-2);
     /* border: solid 1px blue; */
 }
 
 /*imagem da logo do banner*/
 .image-banner {
-    width: 100px;
+    width: 70px;
+    height: auto;
     object-fit: contain;
-
-    /* border: solid 1px yellow; */
 }
 
 /*texto do banner da pagina*/
@@ -79,57 +116,64 @@ body::before {
     justify-content: center;
     align-items: center;
     height: 100px;
-
-    /* border: solid 1px red; */
+    line-height: 1.05;
 }
 
-.titulo {
-    color: var(--cor-h1);
-    letter-spacing: 0.1rem;
-    text-shadow: 0.03rem 0.03rem 0.04rem black;
-}
-
-.titulo-h1 {
-    font-family: 'Playfair Display';
-    font-size: 2.5rem;
+.brand-name {
+    font-family: "Playfair Display", serif;
+    font-size: 2.2rem;
     font-weight: 700;
+    color: var(--gold);
+    letter-spacing: 0.04rem;
+    text-shadow: 0.6px 0.6px 0.6px rgba(0,0,0,0.25);
 }
 
-.titulo-h2 {
-    font-family: 'Lato';
+.brand-subtitle {
+    font-family: "Lato", sans-serif;
+    font-size: 0.95rem;
     font-weight: 400;
-}
-
-.section {
-    display: flex;
-    height: 100vh;
-
-    display: flex;
-    flex-direction: column;
-
-
-    border: solid 1px green;
+    color: var(--text-soft);
+    margin-top: 4px;
 }
 
 .bride-box-text {
     display: flex;
     flex-direction: column;
     margin-top: 2rem;
-    gap: 1rem;
-    color: #383320;
+    gap: var(--space-2);
+    text-align: left;
+    max-width: 760px;
+    
+    margin: 0 auto;
+    padding: 16px 14px;
 
-    height: 10vh;
-    width: auto;
-
-    /* border: solid 1px pink; */
+    /* background: var(--card);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    border: 1px solid rgba(176, 141, 87, 0.22); */
 }
 
 .bride-box-text h1 {
-    font-size: 1.5rem;
+    font-family: "Playfair Display", serif;
+    font-size: clamp(1.55rem, 4vw, 2.2rem);
+    font-weight: 600;
+    color: var(--text);
 }
 
-.bride-box-text h2 {
-    font-size: 1.1rem;
+.subtitle {
+    font-size: 1.05rem;
+    color: var(--text-soft);
+    line-height: 1.35;
+}
+
+.benefits {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+    font-size: 0.95rem;
+
+    color: rgba(43, 43, 43, 0.78);
 }
 
 .bride-pictures {
@@ -139,28 +183,93 @@ body::before {
     align-items: center;
     gap: 0.5rem;
 
-    height: 50vh;
+    height: 35vh;
     width: auto;
 
     /* border: solid 2px yellow; */
 }
 
+.card-photo {
+    width: clamp(160px, 42vw, 260px);
+    text-align: center;
+    background: rgba(255, 255, 255, 0.55);
+    border-radius: var(--radius);
+    padding: 10px;
+    border: solid 1px rgba(176, 141, 87, 0.20);
+      box-shadow: 0 10px 22px rgba(0, 0, 0, 0.09);
+}
+
 .bride-pictures-frame {
+    width: 100%;
+    height: clamp(10px 42vw 320px);
+    object-fit: cover;
+    border-radius: 12px;
+    border: solid 1px rgba(176, 141, 87, 0.35);
+
+}
+/* .bride-pictures-frame {
     height: 230px;
     width: auto;
     padding: 0.2rem;
 
     border: solid 3px var(--cor-botoes);
+} */
+
+.card-photo figcaption {
+    margin-top: 10px;
+    font-size: 0.95rem;
+    color: rgba(43, 43, 43, 0.75);
+    font-weight: 600;
+    font-family: "Montserrat", sans-serif;
 }
 
 .bride-btn {
+    margin-top: var(--space-2);
     display: flex;
-    justify-content: center;
-
-    /* border: solid 2px red; */
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
 }
 
 .btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 52px;
+    padding: 0 24px;
+    background: var(--gold);
+    color: #fff;
+
+    text-decoration: none;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    
+    border-radius: 999px;
+    box-shadow: 0 10px 22px rgba(176, 141, 87, 0.35);
+    border: 1px solid rgba(255,255,255,0.18);
+
+    transition: transform 160ms ease, filter 160ms ease;
+}
+
+btn:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.03);
+}
+
+.microcopy {
+  font-size: 0.9rem;
+  color: rgba(43, 43, 43, 0.65);
+}
+
+/* .bride-btn {
+    display: flex;
+    justify-content: center;
+} */
+
+
+/* .btn {
     height: 26px;
     width: 200px;
     background-color: var(--cor-botoes);
@@ -171,5 +280,4 @@ body::before {
     
     border: none;
     box-shadow: 1px 1px 7px;
-}
-
+} */

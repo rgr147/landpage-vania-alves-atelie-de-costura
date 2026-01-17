@@ -11,7 +11,7 @@
     <meta name="description" content="Atelie de costura vestidos de noiva, fantasias infantil para mesversarios e aniversarios, peças sob medida"/>
 
     <!--visual - alterar a cor da barra do navegador-->
-    <meta name="theme-color" content="#0f172a"/>
+    <meta name="theme-color" content="#F9F7F2"/>
 
     <!--testar esse trecho depois da página pronta
     
@@ -26,7 +26,7 @@
     <meta property="og:url" content="https://seudominio.com/" />
     -->
 
-    <title>Atelie de costura - Vania Alves</title>
+    <title>Ateliê de Costura - Vânia Alves</title>
     
     <!--meu css-->
     <link rel="stylesheet" href="assets/css/main.css"/>
@@ -38,34 +38,57 @@
     <link rel="apple-touch-icon" href="assets/img/ico_16x16.png"/>
     
     <!--fonts-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link
+    href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
 
 </head>
 <body>
     <div class="container">
-        <header class="border-text">      
-            <div class="banner">
-                <img class="image-banner" src="./assets/img/logo_pagina.png" alt="Logomarca da página do Vania Alves Atelie de Corte e Costura"/>
-                <div class="text-banner">
-                    <h1 class="titulo titulo-h1">Vania Alves</h1>
-                    <h3 class="titulo titulo-h2">Atelie de Corte e Costura</h3>
-                </div>
-            </div>
-        </header>
         <!--secao com vestido de noiva-->
         <section class="section hero">
+            <header class="banner" arial-label="Identidade do Ateliê">
+                <img class="image-banner" src="./assets/img/logo_pagina.png" alt="Logomarca do Vânia Alves Ateliê de Corte e Costura"/>
+
+                <div class="text-banner">
+                    <p class="brand-name">Vânia Alves</p>
+                    <p class="brand-subtitle">Ateliê de Corte e Costura</p>
+                </div>           
+            </header>
+            
             <div class="bride-box-text">
                 <h1>Seu momento único merece um vestido inesquecível.</h1>
-                <h2>Vestidos de noivas e noivinhas sob medida.</h2>
+                <p class="subtitle">Noivas e noivinhas sob medida.</p>
             </div>
-            <div class="bride-pictures">
+
+            <div class="benefits" aria-label="Benefícios">
+                <span>Atendimento presencial</span>
+                <span>•</span>
+                <span>Sob medida</span>
+                <span>•</span>
+                <span>Provas e ajustes</span>
+            </div>
+
+            <div class="bride-pictures" aria-label="Galeria de vestidos">
+                <figure class="card-photo">
+                    <img class="bride-pictures-frame" src="./assets/img/vestido-noiva-1.jpeg" alt="Foto de noiva usando o vestido de noiva"/>
+                    <figcaption>Noivas sob medida</figcaption>
+                </figure>
+
+                <figure class="card-photo">                  
+                    <img class="bride-pictures-frame" src="./assets/img/novinha-editado1.png" alt="Foto de noivinha usando vestido sob medida"/>
+                    <figcaption>Noivinhas sob medida</figcaption>
+                </figure>
+            </div>
+            <!-- <div class="bride-pictures" aria-label="Galeria de vestidos">
+                
                 <img class="bride-pictures-frame" src="./assets/img/vestido-noiva-1.jpeg" alt="Foto de uma noiva com vestido"/>
                 <img class="bride-pictures-frame" src="./assets/img/novinha-editado1.png" alt="Foto de uma noivinha com vestido"/>
-            </div>
+            </div> -->
+            
             <div class="bride-btn">
-                <button class="btn">TIRA SUAS DÚVIDAS</button>
+                <a class="btn" href="https://wa.me/5511959368963" target="_blank" rel="noopen">TIRE SUAS DÚVIDAS</a>
+                <small class="microcopy">Orçamento sem compromisso</small>
+                <!-- <button class="btn">TIRA SUAS DÚVIDAS</button> -->
             </div>
         </section>
         <!--secao com fantasias de mesversario-->
