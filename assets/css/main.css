@@ -86,7 +86,6 @@ body::after {
     flex-direction: column;
     gap: var(--space-4);
     padding: 10px 0;
-git b
     /* border: solid 1px green; */
 }
 
