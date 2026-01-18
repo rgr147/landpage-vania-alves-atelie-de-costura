@@ -40,7 +40,7 @@ body {
     background-color: var(--bg);
     font-family: "Lato", sans-serif;
     color: var(--text);
-    min-height: 100vh;
+    min-height: 100svh;
     /* position: relative; */
 }
 
@@ -81,7 +81,7 @@ body::after {
 
 .section {
     display: flex;
-    min-height: 100vh;
+    min-height: 100svh;
     flex-direction: column;
     gap: var(--space-3);
     padding: 10px 0;
@@ -182,7 +182,7 @@ body::after {
     align-items: center;
     gap: 0.5rem;
 
-    height: 35vh;
+    height: 35svh;
     width: auto;
 
     /* border: solid 2px yellow; */
