@@ -14,7 +14,6 @@
     --space-2: 14px;
     --space-3: 22px;
     --space-4: 32px;
-
     
     /* --cor-h1: #CAAB65;
     --cor-h2: var(--cor-h1);
@@ -71,7 +70,7 @@ body::after {
     pointer-events: none;
 }
 
-/*container com todo conteudo da pagina*/
+/*container com todo conteudo contido no body*/
 .container {
     display: flex;
     flex-direction: column;
@@ -84,7 +83,7 @@ body::after {
     display: flex;
     min-height: 100svh;
     flex-direction: column;
-    gap: var(--space-4);
+    gap: var(--space-3);
     padding: 10px 0;
 
     border: solid 1px green;
