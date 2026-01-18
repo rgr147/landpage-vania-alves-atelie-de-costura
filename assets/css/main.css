@@ -81,7 +81,7 @@ body::after {
 
 .section {
     display: flex;
-    min-height: 100svh;
+    min-height: 100vh;
     flex-direction: column;
     gap: var(--space-3);
     padding: 10px 0;
@@ -283,7 +283,7 @@ btn:hover {
 
 .mesversario {
     /* background-color: var(--bg-mesversario);*/
-    background-image: linear-gradient(rgba(178, 166, 151, 0.9), rgba(178, 166, 151, 0.4), rgba(178, 166, 151, 0)), url("../img/bg-mesversario.png");
+    background-image: linear-gradient(rgba(178, 166, 151, 0.5), rgba(178, 166, 151, 0.2), rgba(178, 166, 151, 0)), url("../img/bg-mesversario.png");
     /* background-image: url("../img/bg-mesversario.png"); */
     background-position: top right;
     background-repeat: no-repeat;
