@@ -1,4 +1,4 @@
-/*importando as fontes utilizadas no projeto*/
+/*importação das fonts utilizadas*/
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@500;600;700&display=swap");
 
 /*paleta de cores do projeto*/
@@ -9,6 +9,8 @@
     --gold: #B08D57;
     --gold-soft: #D9C7B0;
 
+    --bg-mesversario: #f2eff7;
+
     --card: rgba(255, 255, 255, 0.78);
     --shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
     --radius: 14px;
@@ -17,12 +19,6 @@
     --space-2: 14px;
     --space-3: 22px;
     --space-4: 32px;
-
-    
-    /* --cor-h1: #CAAB65;
-    --cor-h2: var(--cor-h1);
-    --cor-titulos-secundarios: #4A4A4A;
-    --cor-botoes: #BA9E68; */
 }
 
 /*inicio reset basico da pagina*/
@@ -48,8 +44,8 @@ body {
     /* position: relative; */
 }
 
-/*adicionando a imagem de fundo na secao noiva*/
-body::before {
+/*adicionando a imagem de fundo na section hero*/
+.hero::before {
     content: "";
     position: absolute;
     inset: 0;
@@ -74,13 +70,13 @@ body::after {
     pointer-events: none;
 }
 
-/*container com todo conteudo da pagina*/
+/*container com todo conteudo contido no body*/
 .container {
     display: flex;
     flex-direction: column;
     max-width: 1100px;
     margin: 0 auto;
-    padding: 28px 20px;
+    /* padding: 28px 20px; */
 }
 
 .section {
@@ -89,7 +85,8 @@ body::after {
     flex-direction: column;
     gap: var(--space-3);
     padding: 10px 0;
-    /* border: solid 1px green; */
+
+    border: solid 1px green;
 }
 
 /*banner*/
@@ -185,7 +182,7 @@ body::after {
     align-items: center;
     gap: 0.5rem;
 
-    height: 35vh;
+    height: 35svh;
     width: auto;
 
     /* border: solid 2px yellow; */
@@ -198,7 +195,7 @@ body::after {
     border-radius: var(--radius);
     padding: 10px;
     border: solid 1px rgba(176, 141, 87, 0.20);
-      box-shadow: 0 10px 22px rgba(0, 0, 0, 0.09);
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.09);
 }
 
 .bride-pictures-frame {
@@ -283,3 +280,91 @@ btn:hover {
     border: none;
     box-shadow: 1px 1px 7px;
 } */
+
+.mesversario {
+    /* background-color: var(--bg-mesversario);*/
+    background-image: linear-gradient(rgba(178, 166, 151, 0.5), rgba(178, 166, 151, 0.2), rgba(178, 166, 151, 0)), url("../img/bg-mesversario.png");
+    /* background-image: url("../img/bg-mesversario.png"); */
+    background-position: top right;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.mesversario-slide-card-photo {
+    width: clamp(160px, 42vw, 260px);
+    text-align: center;
+    background: rgba(255, 255, 255, 0.55);
+    border-radius: 99px;
+    padding: 10px;
+    border: solid 1px rgba(176, 141, 87, 0.20);
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.09);
+
+}
+
+.mesversario-slide-frame {
+    width: 100%;
+    height: clamp(10px 42vw 320px);
+    object-fit: cover;
+    border-radius: 99px;
+    border: solid 1px rgba(176, 141, 87, 0.35);
+
+}
+
+.mesversario-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.mesversario-btn {
+    width: 42px;
+    height: 42px;
+    border: 0;
+    border-radius: 50%;
+    cursor: pointer;
+    background: #b89463;
+    color: #ffffff;
+    font-size: 28px;
+    line-heght: 42px;
+}
+
+.mesversario-btn:disabled {
+    opacity: 0.35;
+    cursor: not-allowed;
+}
+
+.mesversario-track {
+    display: flex;
+    gap: 16px;
+
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+
+    padding: 8px 16px 16px;
+    scrollbar-width: none;
+}
+
+.mesversario-track::-webkit-scrollbar {
+  display: none;
+}
+
+.mesversario-slide {
+    flex: 0 0 78%;
+    scroll-snap-align: start;
+}
+
+@media (min-width: 768px) {
+  .mesversario-slide {
+    flex: 0 0 320px;
+  }
+}
+
+
+.mesversario-slide-card-photo {
+    margin: 0;
+    overflow: hidden;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,.10);
+
+}
