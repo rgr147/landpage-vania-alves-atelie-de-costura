@@ -291,26 +291,6 @@ btn:hover {
     background-attachment: fixed;
 }
 
-.mesversario-slide-card-photo {
-    width: clamp(160px, 42vw, 260px);
-    text-align: center;
-    background: rgba(255, 255, 255, 0.55);
-    border-radius: 99px;
-    padding: 10px;
-    border: solid 1px rgba(176, 141, 87, 0.20);
-    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.09);
-
-}
-
-.mesversario-slide-frame {
-    width: 100%;
-    height: clamp(10px 42vw 320px);
-    object-fit: cover;
-    border-radius: 99px;
-    border: solid 1px rgba(176, 141, 87, 0.35);
-
-}
-
 .mesversario-actions {
     display: flex;
     gap: 10px;
@@ -332,6 +312,7 @@ btn:hover {
     opacity: 0.35;
     cursor: not-allowed;
 }
+
 
 .mesversario-track {
     display: flex;
@@ -360,11 +341,45 @@ btn:hover {
   }
 }
 
+.mesversario-slide-card {
+    width: clamp(100%, 42vw, 260px);
+    text-align: center;
+    /* background: rgba(255, 255, 255, 0.55); */
+    border-radius: 99px;
+    padding: 5px;
+    border: solid 5px rgba(176, 141, 87, 0.7);
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.09);
 
-.mesversario-slide-card-photo {
-    margin: 0;
-    overflow: hidden;
+}
 
-    box-shadow: 0 10px 30px rgba(0,0,0,.10);
+.mesversario-slide-card-frame {
+    width: 100%;
+    height: clamp(10px 42vw 320px);
+    object-fit: cover;
+    border-radius: 99px;
+    /* border: solid 1px rgba(176, 141, 87, 0.35); */
 
+}
+
+.mesversario-slide-card-frame {
+    /* width: 100%; */
+    height: 380px;
+    object-fit: cover;
+    display: block;
+}
+@media (min-width: 768px) {
+    .mesversario-slide-card-frame {
+        height: 360px;
+    }
+}
+
+.mesversario-dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    padding: 6px 0 0;
+}
+
+.mesversario-dot.active {
+    background: #b89463;
 }
