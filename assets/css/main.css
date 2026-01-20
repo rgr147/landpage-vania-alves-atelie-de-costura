@@ -21,21 +21,6 @@
     --space-4: 32px;
 }
 
-/*inicio reset basico da pagina*/
-* {
-    margin: 0;
-    padding: 0;
-}
-
-html {
-    box-sizing: border-box;
-}
-
-*, *::before, *::after {
-    box-sizing: inherit;
-}
-/*final reset da pagina*/
-
 body {
     background-color: var(--bg);
     font-family: "Lato", sans-serif;
@@ -305,7 +290,7 @@ btn:hover {
     background: #b89463;
     color: #ffffff;
     font-size: 28px;
-    line-heght: 42px;
+    line-height: 42px;
 }
 
 .mesversario-btn:disabled {
