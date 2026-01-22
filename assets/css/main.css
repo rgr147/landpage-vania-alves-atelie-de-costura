@@ -1,7 +1,7 @@
 /*importação das fonts utilizadas*/
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@500;600;700&display=swap");
 
-/*paleta de cores do projeto*/
+/*paleta de cores e definições globais*/
 :root {
     --bg: #F9F7F2;
     --text: #2B2B2B;
@@ -20,6 +20,8 @@
     --space-3: 22px;
     --space-4: 32px;
 }
+/*paleta de cores e definições globais*/
+
 
 body {
     background-color: var(--bg);
@@ -69,12 +71,12 @@ body::after {
     min-height: 100svh;
     flex-direction: column;
     gap: var(--space-3);
-    padding: 10px 0;
+    padding: 0 0;
 
-    border: solid 1px green;
+    border: solid 1px pink;
 }
 
-/*banner*/
+/*seção do banner*/
 .banner {
     display: flex;
     flex-direction: row;
@@ -86,14 +88,14 @@ body::after {
     /* border: solid 1px blue; */
 }
 
-/*imagem da logo do banner*/
+
 .image-banner {
     width: 70px;
     height: auto;
     object-fit: contain;
 }
 
-/*texto do banner da pagina*/
+
 .text-banner {
     display: flex;
     flex-direction: column;
@@ -119,7 +121,9 @@ body::after {
     color: var(--text-soft);
     margin-top: 4px;
 }
+/*seção do banner*/
 
+/*seção da noiva*/
 .bride-box-text {
     display: flex;
     flex-direction: column;
@@ -246,6 +250,8 @@ btn:hover {
   font-size: 0.9rem;
   color: rgba(43, 43, 43, 0.65);
 }
+/*seção da noiva*/
+
 
 /* .bride-btn {
     display: flex;
@@ -266,105 +272,75 @@ btn:hover {
     box-shadow: 1px 1px 7px;
 } */
 
-.mesversario {
-    /* background-color: var(--bg-mesversario);*/
-    background-image: linear-gradient(rgba(178, 166, 151, 0.5), rgba(178, 166, 151, 0.2), rgba(178, 166, 151, 0)), url("../img/bg-mesversario.png");
-    /* background-image: url("../img/bg-mesversario.png"); */
-    background-position: top right;
-    background-repeat: no-repeat;
+
+/*seção carrossel*/
+
+
+.carousel {
+    height: 100vh;
+    width: 100vw;
+    margin-top: 0;
+    overflow: hidden;
+    position: relative;
+
+
+    /* background-color: red; */
+}
+
+.carousel-list-item {
+    width: 180px;
+    height: 250px;
+    position: absolute;  
+    top: 86%;
+    transform: translateY(-70%);
+    left: 50%;
+    border-radius: 20px;
+    box-shadow: 0 25px 25px rgba(0, 0, 0, 0.3);
+    background-position: 50% 50%;
     background-size: cover;
-    background-attachment: fixed;
+    z-index: 100;
+    transition: 1s;
+
+    /* background-color: blue; */
 }
 
-.mesversario-actions {
-    display: flex;
-    gap: 10px;
-}
-
-.mesversario-btn {
-    width: 42px;
-    height: 42px;
-    border: 0;
-    border-radius: 50%;
-    cursor: pointer;
-    background: #b89463;
-    color: #ffffff;
-    font-size: 28px;
-    line-height: 42px;
-}
-
-.mesversario-btn:disabled {
-    opacity: 0.35;
-    cursor: not-allowed;
-}
-
-
-.mesversario-track {
-    display: flex;
-    gap: 16px;
-
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-
-    padding: 8px 16px 16px;
-    scrollbar-width: none;
-}
-
-.mesversario-track::-webkit-scrollbar {
-  display: none;
-}
-
-.mesversario-slide {
-    flex: 0 0 78%;
-    scroll-snap-align: start;
-}
-
-@media (min-width: 768px) {
-  .mesversario-slide {
-    flex: 0 0 320px;
-  }
-}
-
-.mesversario-slide-card {
-    width: clamp(100%, 42vw, 260px);
-    text-align: center;
-    /* background: rgba(255, 255, 255, 0.55); */
-    border-radius: 99px;
-    padding: 5px;
-    border: solid 5px rgba(176, 141, 87, 0.7);
-    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.09);
-
-}
-
-.mesversario-slide-card-frame {
+.carousel-list-item:nth-child(1),
+.carousel-list-item:nth-child(2) {
+    top: 0;
+    left: 0;
+    transform: translate(0, 0);
+    border-radius: 0;
     width: 100%;
-    height: clamp(10px 42vw 320px);
-    object-fit: cover;
-    border-radius: 99px;
-    /* border: solid 1px rgba(176, 141, 87, 0.35); */
+    height: 100%;
 
 }
 
-.mesversario-slide-card-frame {
-    /* width: 100%; */
-    height: 380px;
-    object-fit: cover;
-    display: block;
-}
-@media (min-width: 768px) {
-    .mesversario-slide-card-frame {
-        height: 360px;
-    }
+.carousel-list-item:nth-child(3) {
+    left: 50%;
+    z-index: 110;
 }
 
-.mesversario-dots {
-    display: flex;
-    justify-content: center;
-    gap: 8px;
-    padding: 6px 0 0;
+.carousel-list-item:nth-child(4) {
+    left: 55%;
+    z-index: 109;
 }
 
-.mesversario-dot.active {
-    background: #b89463;
+.carousel-list-item:nth-child(5) {
+    left: 60%;
+    z-index: 108;
+
 }
+
+.carousel-list-item:nth-child(6) {
+    left: 60%;
+}
+
+.carousel-list-item:nth-child(n+7) {
+    left: 60%;
+}
+
+
+/*seção carrossel*/
+
+
+
