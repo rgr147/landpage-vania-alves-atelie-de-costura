@@ -73,7 +73,7 @@ body::after {
     gap: var(--space-3);
     padding: 0 0;
 
-    border: solid 1px pink;
+    /* border: solid 1px pink; */
 }
 
 /*seção do banner*/
@@ -316,31 +316,83 @@ btn:hover {
 }
 
 .carousel-list-item:nth-child(3) {
-    left: 50%;
-    z-index: 110;
+    left: 66%;
 }
 
 .carousel-list-item:nth-child(4) {
-    left: 55%;
-    z-index: 109;
+    left: calc(66% + 194px);
 }
 
 .carousel-list-item:nth-child(5) {
-    left: 60%;
-    z-index: 108;
-
+    left: calc(66% + 388px);
 }
-
+ 
 .carousel-list-item:nth-child(6) {
-    left: 60%;
+    left: calc(66% + 776px);
 }
 
-.carousel-list-item:nth-child(n+7) {
-    left: 60%;
+.carousel-list-item:nth-child(7) {
+    left: calc(66% + 776px);
 }
 
-
+.carousel-list-item:nth-child(8) {
+    left: calc(66% + 776px);
+}
 /*seção carrossel*/
 
 
 
+
+
+/*next prev arrows*/
+.carousel-arrows {
+    position: absolute;
+    top: 80%;
+    right: 52%;
+    z-index: 100;
+    width: 300px;
+    max-width: 30%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.carousel-arrows button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #14ff72cb;
+    color: #ffffff;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    font-family: monospace;
+    font-weight: bold;
+    transition: .5s;
+    cursor: pointer; 
+}
+/*next prev arrows*/
+
+
+
+
+/*time running*/
+.carousel-timeRunning {
+    position: absolute;
+    z-index: 1000;
+    width: 0;
+    height: 10px;
+    background-color: #14ff72cb;
+    left: 0;
+    top: 0;
+    animation: runningTime 4s linear 1 forwards;
+}
+/*time running*/
+
+
+
+
+@keyframes runningTime {
+    from{width: 0%;}
+    to{width: 100%;}
+}
