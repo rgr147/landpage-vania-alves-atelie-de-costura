@@ -245,13 +245,14 @@ btn:hover {
 
 
 /*seção mes-versario*/
+
+
+/*carrosel*/
 .mes-versario-carousel {
     width: 100vw;
     height: 100vh;
     overflow: hidden;
     position: relative;
-    
-    /* background-color: red; */
 }
 
 .mes-versario-carousel-list-item {
@@ -291,5 +292,28 @@ btn:hover {
     transform: translateX(-80%);
     z-index: 102;
 }
+/*fim carrosel*/
+
+/*setas carrosel*/
+.arrows {
+    width: 100px;
+    height: 60px;
+    position: relative;
+    z-index: 100;
+    top: 80%;
+    left: 15%;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+}
+
+.arrows button {
+    width: 50px;
+    height:50px;
+    border-radius: 50%;
+}
+/*fim setas carrosel*/
+
+
 
 /*fim seção mes-versario*/
