@@ -5,7 +5,11 @@ const state = {
         carousel: document.querySelector('.mes-versario-carousel'),
         list: document.querySelector('.mes-versario-caousel-list'),
         item: document.querySelectorAll('.mes-versario-carousel-list-item'),
-    }
+    },
+    values: {
+        touchStartX: 0,
+        touchEndX: 0,
+    },
 }
 
 /*ações botões next e prev do carrosel mes-versario*/
@@ -18,6 +22,28 @@ state.view.btnPrev.addEventListener('click', () =>
 );
 /*fim ações botões next e prev do carrosel mes-versario*/
 
+
+/*ação de deslizar do dedo*/
+state.view.carousel.addEventListener('click', (event) => {
+    state.values.touchStartX = event.changedTouches[0].screenX;
+}, {passive: true}
+);
+
+state.view.carousel.addEventListener('click', (event) => {
+    state.values.touchEndX = event.changedTouches[0].screenX;
+    chosenSide(); 
+}, {passive: true}
+);
+
+function chosenSide() {
+    if(state.values.touchEndX < state.values.touchStartX -50) {
+        showNextPhoto('next', state.view.list);
+    }
+    if(state.values.touchEndX > state.values.touchStartX +50) {
+        showPreviousPhoto('prev', state.view.list);
+    }
+}
+/*fim ação de deslizar do dedo
 
 /*função para mostrar próxima foto no carrosel do mes-versario */
 function showNextPhoto(type, list) {
