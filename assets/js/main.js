@@ -24,12 +24,11 @@ state.view.btnPrev.addEventListener('click', () =>
 
 
 /*ação de deslizar do dedo*/
-state.view.carousel.addEventListener('click', (event) => {
+state.view.carousel.addEventListener('touchstart', (event) => {
     state.values.touchStartX = event.changedTouches[0].screenX;
-}, {passive: true}
-);
+}, {passive: true});
 
-state.view.carousel.addEventListener('click', (event) => {
+state.view.carousel.addEventListener('touchend', (event) => {
     state.values.touchEndX = event.changedTouches[0].screenX;
     chosenSide(); 
 }, {passive: true}
