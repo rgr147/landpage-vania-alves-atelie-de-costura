@@ -235,7 +235,7 @@ body::after {
     transition: transform 160ms ease, filter 160ms ease;
 }
 
-btn:hover {
+.btn:hover {
     transform: translateY(-2px);
     filter: brightness(1.03);
 }
@@ -249,19 +249,20 @@ btn:hover {
 
 
 /*seção mes-versario*/
-
-
-/*carrosel*/
 .mes-versario {
-    background-image: url('../img/bg-mesversario.png');
+    /* background-image: url('../img/bg-mesversario.png'); */
+    background-image: linear-gradient(to bottom, rgba(217, 199, 176, 0.6), rgba(249, 247, 242, 0.4)), url('../img/bg-mesversario.png');
     background-size: cover;
     background-attachment: fixed;
+    overflow: hidden;
 }
+
 
 .mes-versario-title {
-    margin-top: 1rem;
+    margin-top: 64px;
 }
 
+/*elementos do carrosel*/
 .mes-versario-carousel {
     width: 100vw;
     height: 100vh;
@@ -269,21 +270,20 @@ btn:hover {
     position: relative;
     display: flex;
     flex-direction: column;
+    margin-top: var(--space-4)
 }
 
 .mes-versario-caousel-list {
     height: 60vh;
     width: 100vw;
     position: relative;
-    /* position: absolute; */
-    /* right: 0; */
-    /* bottom: 0; */
-
 }
 
 .mes-versario-carousel-list-item {
-    width: 85%;
-    height: 80%;
+    width: 380px;
+    height: 500px;
+    /* width: 85%; */
+    /* height: 80%; */
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -291,80 +291,31 @@ btn:hover {
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-color: rgb(249, 247, 242, 0.78);
-    
-
-}
-.mes-versario-carousel-list-item:nth-child(1) {
-    z-index: 100;
-
-}
-.mes-versario-carousel-list-item:nth-child(2) {
-    transform: translateX(52%);
-
-}
-
-.mes-versario-carousel-list-item:nth-child(n+3) {
-    display: none;
-}
-.mes-versario-carousel-list-item:nth-last-child(1) {
-    display: block;
-    left: 0;
-    transform: translateX(-95%)
-}
-
-
-/* .mes-versario-carousel-list-item {
-    width: 150px;
-    height: 220px;
-    position: absolute;
-    top: 65%;
-    left:90%;
-    transform: translateX(-100%);
-    border-radius: 20%;
-    box-shadow: 0 25px 50px rgba(0,0,0,0.3);
-    background-position: 50% 50%;
-    background-size: cover;
-    z-index: 100;
     transition: 0.5s cubic-bezier(0.25, 1, 0.5, 1);
-    object-fit:cover;
-} */
+    border-radius: 100px;
+}
 
-/* .mes-versario-carousel-list-item:nth-child(1) {
-    top: 0;
+.mes-versario-carousel-list-item:nth-child(1) { 
     left: 0;
-    width: 100%;
-    height: 100%;
-    box-shadow: none;
-    transform: translate(0, 0);
-    border-radius: 0;
-    z-index: 100; */
+    transform: translateX(-95%);
+}
 
-    /*adicionando fade nas bordas*/
-    /* -webkit-mask-image: radial-gradient(circle, #000 65%, transparent 60%);
-    mask-image: radial-gradient(circle, #000 90%, transparent 90%);
-    -webkit-mask-repeat: no-repeat;
-    mask-repeat: no-repeat;
-} */
-
-/* .mes-versario-carousel-list-item:nth-child(2) {
-    z-index: 104;
+.mes-versario-carousel-list-item:nth-child(2) {
+    z-index: 100;
 }
 
 .mes-versario-carousel-list-item:nth-child(3) {
-    transform: translateX(-90%);  
-    z-index: 103;
+    transform: translateX(54%);
 }
 
-.mes-versario-carousel-list-item:nth-child(4) {
-    transform: translateX(-80%);
-    z-index: 102;
+.mes-versario-carousel-list-item:nth-child(n+4):nth-last-child(n+1) {
+    display: none; 
+    transform: translateX(calc(54% + 20px));
+   
 }
+/*fim elementos do carrosel*/
 
-.mes-versario-carousel-list-item:nth-child(n+5) {
-    display: none;     */
 
-/* } */
-/*fim carrosel*/
 
 /*botoes de next e prev carrosel*/
 .arrows {
@@ -374,13 +325,7 @@ btn:hover {
     width: 100%;
     height: 50px;
     padding: 1px 30px;
-    /* position: relative; */
-    /* z-index: 100; */
-    /* top: 94%; */
-    /* left: 50%; */
-    /* z-index: 105; */
     gap: 10px;
-
 }
 
 .btn-carousel {
@@ -390,6 +335,7 @@ btn:hover {
     width: 45%;
     border-radius: 100px;
     border: none;
+    font-size: 2rem;
 }
 
 .btn-carousel:link,

@@ -23,8 +23,8 @@ function createItemsCarousel() {
         div.className = 'mes-versario-carousel-list-item';
         div.style.backgroundImage = `url(./assets/img/mesversario-${i+1}.jpeg)`;
         fragment.appendChild(div);
-        state.view.carouselList.appendChild(fragment);
     }
+    state.view.carouselList.appendChild(fragment);
 }
 /*fim função responsável por adicionar fotos no carrosel do mes-versario*/
 
@@ -52,7 +52,7 @@ function showNextPhoto(type, list) {
 /*função botão prev para mostrar a foto anterior do carrosel mes-versario*/
 function showPreviousPhoto(type, list) {
     if (type === 'prev') {
-        listLength = list.children.length;
+        const listLength = list.children.length;
         state.view.carouselList.prepend(list.children[listLength -1]);
     }
 }
