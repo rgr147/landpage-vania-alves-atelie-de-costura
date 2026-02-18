@@ -385,6 +385,13 @@ body::after {
 
 /*fim botoes de next e prev carrosel*/
 
-
+.mes-versario-cta {
+    margin-top: var(--space-3);
+    padding-bottom: var(--space-4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
 
 /*fim seção mes-versario*/
