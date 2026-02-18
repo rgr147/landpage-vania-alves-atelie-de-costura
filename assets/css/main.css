@@ -78,7 +78,7 @@ body::after {
     display: flex;
     min-height: 100svh;
     flex-direction: column;
-    gap: var(--space-3);
+    gap: var(--space-2);
     padding: 0 0;
 }
 /*fim definição das seções*/
@@ -263,7 +263,7 @@ body::after {
 
 
 .mes-versario-title {
-    margin-top: 64px;
+    margin-top: var(--space-4);
 }
 
 /*elementos do carrosel*/
@@ -274,7 +274,7 @@ body::after {
     position: relative;
     display: flex;
     flex-direction: column;
-    margin-top: var(--space-4)
+    /* margin-top: var(--space-2); */
 }
 
 .mes-versario-caousel-list {
@@ -284,8 +284,8 @@ body::after {
 }
 
 .mes-versario-carousel-list-item {
-    width: 23rem;
-    height: 25rem;
+    width: 18rem;
+    height: 20rem;
     /* width: 85%; */
     /* height: 80%; */
     position: absolute;
