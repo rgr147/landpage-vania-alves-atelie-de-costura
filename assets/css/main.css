@@ -144,6 +144,10 @@ body::after {
     max-width: 760px;
     margin: 0 auto;
     padding: 16px 14px;
+    
+    /*trecho para apagar, adicionado apenas de teste*/
+    background: rgba(255, 255, 255, 0.55);
+    /*fim trecho para apagar, adicionado apenas de teste*/
 }
 
 .bride-box-text h1 {
@@ -248,18 +252,72 @@ btn:hover {
 
 
 /*carrosel*/
+.mes-versario {
+    background-image: url('../img/bg-mesversario.png');
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.mes-versario-title {
+    margin-top: 1rem;
+}
+
 .mes-versario-carousel {
     width: 100vw;
     height: 100vh;
     overflow: hidden;
     position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.mes-versario-caousel-list {
+    height: 60vh;
+    width: 100vw;
+    position: relative;
+    /* position: absolute; */
+    /* right: 0; */
+    /* bottom: 0; */
+
 }
 
 .mes-versario-carousel-list-item {
-    width: 180px;
-    height: 250px;
+    width: 85%;
+    height: 80%;
     position: absolute;
-    top: 60%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-color: rgb(249, 247, 242, 0.78);
+    
+
+}
+.mes-versario-carousel-list-item:nth-child(1) {
+    z-index: 100;
+
+}
+.mes-versario-carousel-list-item:nth-child(2) {
+    transform: translateX(52%);
+
+}
+
+.mes-versario-carousel-list-item:nth-child(n+3) {
+    display: none;
+}
+.mes-versario-carousel-list-item:nth-last-child(1) {
+    display: block;
+    left: 0;
+    transform: translateX(-95%)
+}
+
+
+/* .mes-versario-carousel-list-item {
+    width: 150px;
+    height: 220px;
+    position: absolute;
+    top: 65%;
     left:90%;
     transform: translateX(-100%);
     border-radius: 20%;
@@ -268,9 +326,10 @@ btn:hover {
     background-size: cover;
     z-index: 100;
     transition: 0.5s cubic-bezier(0.25, 1, 0.5, 1);
-}
+    object-fit:cover;
+} */
 
-.mes-versario-carousel-list-item:nth-child(1) {
+/* .mes-versario-carousel-list-item:nth-child(1) {
     top: 0;
     left: 0;
     width: 100%;
@@ -278,10 +337,16 @@ btn:hover {
     box-shadow: none;
     transform: translate(0, 0);
     border-radius: 0;
-    z-index: 100;
-}
+    z-index: 100; */
 
-.mes-versario-carousel-list-item:nth-child(2) {
+    /*adicionando fade nas bordas*/
+    /* -webkit-mask-image: radial-gradient(circle, #000 65%, transparent 60%);
+    mask-image: radial-gradient(circle, #000 90%, transparent 90%);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+} */
+
+/* .mes-versario-carousel-list-item:nth-child(2) {
     z-index: 104;
 }
 
@@ -294,27 +359,91 @@ btn:hover {
     transform: translateX(-80%);
     z-index: 102;
 }
+
+.mes-versario-carousel-list-item:nth-child(n+5) {
+    display: none;     */
+
+/* } */
 /*fim carrosel*/
 
-/*setas carrosel*/
+/*botoes de next e prev carrosel*/
 .arrows {
-    width: 100px;
-    height: 60px;
-    position: relative;
-    z-index: 100;
-    top: 80%;
-    left: 15%;
     display: flex;
-    align-items:center;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    padding: 1px 30px;
+    /* position: relative; */
+    /* z-index: 100; */
+    /* top: 94%; */
+    /* left: 50%; */
+    /* z-index: 105; */
+    gap: 10px;
+
 }
 
-.arrows button {
-    width: 50px;
-    height:50px;
-    border-radius: 50%;
+.btn-carousel {
+    background-color: #fff;
+    color: #777;
+    height: 100%;
+    width: 45%;
+    border-radius: 100px;
+    border: none;
 }
-/*fim setas carrosel*/
+
+.btn-carousel:link,
+.btn-carousel:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 40px;
+    display: inline-block;
+    border-radius: 100px;
+    transition: all .2s;
+    position: absolute;
+}
+
+.btn-carousel:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+
+.btn-carousel::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 45%; 
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+    background-color: #fff;
+}
+
+.btn-carousel:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+}
+
+.btn-carousel {
+    animation: moveInBottom 0.1s ease-out;
+    animation-fill-mode: backwards;
+}
+
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+/*fim botoes de next e prev carrosel*/
 
 
 
