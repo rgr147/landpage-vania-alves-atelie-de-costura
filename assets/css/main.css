@@ -1,6 +1,6 @@
 /*importando fonts utilizadas*/
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@500;600;700&display=swap");
-
+/*fim importando fonts utilizadas*/
 
 
 /*paleta de cores e definições glabais*/
@@ -25,15 +25,34 @@
 /*fim paleta de cores e definições globais*/
 
 
-
 body {
     background-color: var(--bg);
     font-family: "Lato", sans-serif;
     color: var(--text);
     min-height: 100dvh;
-    /* position: relative; */
 }
 
+
+/*classe de container que contem todas seções da página*/
+.container {
+    display: flex;
+    flex-direction: column;
+    max-width: 1100px;
+    margin: 0 auto;
+    user-select: none;
+}
+/*fim classe de container que contem todas seções da página*/
+
+
+/*definição da classe que está definida em todas seções da página*/
+.section {
+    display: flex;
+    min-height: 100dvh;
+    flex-direction: column;
+    gap: var(--space-2);
+    padding: 0 0;
+}
+/*fim definição da classe que está definida em todas seções da página*/
 
 
 /*imagem de background da seção hero*/
@@ -62,49 +81,20 @@ body::after {
 /*fim imagem de background da seção hero*/
 
 
-
-/*container do body*/
-.container {
-    display: flex;
-    flex-direction: column;
-    max-width: 1100px;
-    margin: 0 auto;
-    user-select: none;
-}
-/*fim container do body*/
-
-
-/*definição das seções*/
-.section {
-    display: flex;
-    min-height: 100dvh;
-    flex-direction: column;
-    gap: var(--space-2);
-    padding: 0 0;
-}
-/*fim definição das seções*/
-
-
-
-/*header da pagina*/
+/*header e banner da pagina*/
 .banner {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    /* margin: auto; */
-    /* padding: 0.25rem; */
     gap: var(--space-2);
-    /* border: solid 1px blue; */
 }
-
 
 .image-banner {
     width: 70px;
     height: auto;
     object-fit: contain;
 }
-
 
 .text-banner {
     display: flex;
@@ -131,11 +121,10 @@ body::after {
     color: var(--text-soft);
     margin-top: 4px;
 }
-/*fim header da pagina*/
+/*fim header e banner da pagina*/
 
 
-
-/*seção noiva*/
+/*seção hero com o tema casamento*/
 .first-box-text {
     display: flex;
     flex-direction: column;
@@ -249,7 +238,7 @@ body::after {
   font-size: 0.9rem;
   color: rgba(43, 43, 43, 0.65);
 }
-/*fim seção noiva*/
+/*fim seção hero com o tema casamento*/
 
 
 
@@ -257,7 +246,8 @@ body::after {
 .mes-versario {
     background-image: linear-gradient(rgb(255 0 212 / 20%), rgb(255 255 255), rgb(9 59 252 / 20%)), url(../img/bg-mesversario.png);
     background-size: cover;
-    background-attachment: fixed;
+    /*background-attachment: fixed;*/ /*efeito attachment removido para melhorar performance que foi prejudicado em conjunto com o a propriedade dvh*/
+    background-attachment: center;
     overflow: hidden;
 }
 
