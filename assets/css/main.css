@@ -374,14 +374,7 @@ body::after {
 /*considerando telas de iphone 15*/
 @media screen and (max-height: 852px) {
     .section {
-        min-height: 100dvh;
-    }
-    .mes-versario-caousel-list {
-    height: 40dvh;
-    }
-    .mes-versario-carousel-list-item {
-    max-height: auto;
-    max-width: auto;
+        min-height: 100vh;
     }
 }
 /*fim considerando telas de iphone 15*/
