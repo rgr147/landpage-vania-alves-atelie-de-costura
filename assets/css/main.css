@@ -3,7 +3,7 @@
 /*fim importando fonts utilizadas*/
 
 
-/*paleta de cores e definições glabais*/
+/*paleta de cores e definições globais*/
 :root {
     --bg: #F9F7F2;
     --text: #2B2B2B;
@@ -47,7 +47,7 @@ body {
 /*definição da classe que está definida em todas seções da página*/
 .section {
     display: flex;
-    min-height: 100dvh;
+    min-height: 100vh;
     flex-direction: column;
     gap: var(--space-2);
     padding: 0 0;
