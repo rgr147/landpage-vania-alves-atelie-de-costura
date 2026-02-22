@@ -381,11 +381,11 @@ body::after {
         gap: var(--space-2);
     }
     .mes-versario-caousel-list {
-        height: 45svh;
+        min-height: 40svh;
     }
     .mes-versario-carousel-list-item {
-        width: 18rem;
-        height: 20rem;
+        width: 15rem;
+        height: 17rem;
     }
 }
 /*fim considerando telas de iphone 15*/
