@@ -250,8 +250,6 @@ body::after {
 
 /*elementos do carrosel*/
 .mes-versario-carousel {
-    /* width: 100vw;
-    height: 100vh; */
     overflow: hidden;
     position: relative;
     display: flex;
@@ -374,9 +372,16 @@ body::after {
 
 /*inicio das configurações relacionadas a tamanhos de tela*/
 /*considerando telas de iphone 15*/
-@media screen and (max-width: 430px) {
+@media screen and (max-height: 852px) {
     .section {
         min-height: 100dvh;
+    }
+    .mes-versario-caousel-list {
+    height: 40dvh;
+    }
+    .mes-versario-carousel-list-item {
+    max-height: auto;
+    max-width: auto;
     }
 }
 /*fim considerando telas de iphone 15*/
