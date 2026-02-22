@@ -373,8 +373,8 @@ body::after {
 /*inicio das configurações relacionadas a tamanhos de tela*/
 /*considerando telas de iphone 15*/
 @media screen and (max-height: 852px) {
-    .section {
-        min-height: 100vh;
+    body {
+    min-height: 100vh;
     }
 }
 /*fim considerando telas de iphone 15*/
