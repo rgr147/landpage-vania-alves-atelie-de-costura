@@ -29,7 +29,7 @@ body {
     background-color: var(--bg);
     font-family: "Lato", sans-serif;
     color: var(--text);
-    min-height: 100vh;
+    min-height: 100dvh;
 }
 
 
