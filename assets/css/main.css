@@ -374,8 +374,8 @@ body::after {
 /*considerando telas de iphone 15*/
 @media screen and (max-height: 852px) {
     .mes-versario-carousel-list-item {
-        width: 15rem;
-        height: 17rem;
+        width: 16rem;
+        height: 18rem;
     }
 }
 /*fim considerando telas de iphone 15*/
