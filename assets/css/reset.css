@@ -1,0 +1,14 @@
+/*inicio reset basico da pagina*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+/*final reset da pagina*/
