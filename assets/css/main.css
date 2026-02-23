@@ -288,10 +288,19 @@ body::after {
     transform: translateX(54%);
 }
 
-.mes-versario-carousel-list-item:nth-child(n+4):nth-last-child(n+1) {
-    display: none; 
-    transform: translateX(calc(54% + 20px));
+.mes-versario-carousel-list-item:nth-child(4) {
+    /* display: none;  */
+    transform: translateX(calc(54% + 480px));
    
+}
+.mes-versario-carousel-list-item:nth-child(5) {
+    /* display: none;  */
+    transform: translateX(calc(54% + 480px));
+   
+}
+.mes-versario-carousel-list-item:nth-child(n+6):nth-last-child(n+1) {
+    display: none; 
+    transform: translateX(calc(54% + 200px));
 }
 /*fim elementos do carrosel*/
 
@@ -455,22 +464,32 @@ body::after {
         margin-top: var(--space-4);
     }
     .mes-versario-carousel-list-item {
-        width: 40%;
-        height: 95%;
+        width: 35%;
+        height: 80%;
         background-size: cover;
         border-radius: 20px;
     }
 
     .mes-versario-carousel-list-item:nth-child(1) { 
-        transform: translateX(-159%);
+        transform: translateX(calc(-159% - 330px));
     }
 
     .mes-versario-carousel-list-item:nth-child(2) {
-        z-index: 100;
+        transform: translateX(-159%);
     }
 
     .mes-versario-carousel-list-item:nth-child(3) {
+        transform: translateX(-50%);
+    }    
+    .mes-versario-carousel-list-item:nth-child(4) {
         transform: translateX(59%);
+    }    
+    .mes-versario-carousel-list-item:nth-child(5) {
+        transform: translateX(calc(59% + 390px));
+
+    }    
+    .mes-versario-carousel-list-item:nth-child(n+6):nth-last-child(n+1) {
+        display: none;
     }    
     /*fim elementos do carrosel*/
 
