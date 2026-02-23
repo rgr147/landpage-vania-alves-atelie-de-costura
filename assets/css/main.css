@@ -412,12 +412,12 @@ body::after {
     }
 
     .card-photo {
-        width: 41%;
+        width: 35%;
         height: 95%;
     }
 
     .bride-pictures-frame {
-        width: 90%;
+        width: 95%;
         height: 90%;
         object-fit: cover;
         margin-top: var(--space-1);
@@ -455,7 +455,7 @@ body::after {
         margin-top: var(--space-4);
     }
     .mes-versario-carousel-list-item {
-        width: 70%;
+        width: 40%;
         height: 95%;
         background-size: cover;
         border-radius: 20px;
