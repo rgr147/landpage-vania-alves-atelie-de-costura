@@ -1,0 +1,28 @@
+# Arquivos de Sistema Operacional (Lixo gerado automaticamente)
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Arquivos de Log
+*.log
+
+# Configurações de Editor (VS Code, etc - são pessoais e não do projeto)
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Arquivos de Design Editáveis (Pesados - não devem ir para o GitHub)
+# Mantenha apenas os .png, .jpg, .webp finais na pasta assets
+*.psd
+*.ai
+*.cdr
+*.fig
+*.sketch
+
+# Dependências (Caso você use Node.js no futuro)
+node_modules/
+
+# Arquivos de ambiente (Segurança)
+.env

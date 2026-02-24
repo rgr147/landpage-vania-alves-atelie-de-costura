@@ -3,7 +3,7 @@ const state = {
         btnNext: document.querySelector('.next'),
         btnPrev: document.querySelector('.prev'),
         carousel: document.querySelector('.mes-versario-carousel'),
-        carouselList: document.querySelector('.mes-versario-caousel-list'),
+        carouselList: document.querySelector('.mes-versario-carousel-list'),
         carouselItem: document.querySelectorAll('.mes-versario-carousel-list-item'),
     },
     values: {
@@ -81,3 +81,19 @@ function chosenSide() {
     }
 }
 /*fim ações de deslizar do dedo no carrosel mes-versario*/
+
+/*proteção básica de imagens*/
+/*previne o menu de contexto (botão direito) em imagens*/
+document.addEventListener('contextmenu', (event) => {
+    if (event.target.tagName === 'IMG') {
+        event.preventDefault();
+    }
+});
+
+/*previne o arrastar de imagens (drag and drop)*/
+document.addEventListener('dragstart', (event) => {
+    if (event.target.tagName === 'IMG') {
+        event.preventDefault();
+    }
+});
+/*fim proteção básica de imagens*/

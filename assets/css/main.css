@@ -256,7 +256,7 @@ body::after {
     flex-direction: column;
 }
 
-.mes-versario-caousel-list {
+.mes-versario-carousel-list {
     height: 45dvh;
     width: 100vw;
     position: relative;
@@ -458,7 +458,7 @@ body::after {
         height: 70vh;
     }
 
-    .mes-versario-caousel-list {
+    .mes-versario-carousel-list {
         height: 100%;
         max-width: 1100px;
         margin-top: var(--space-4);
