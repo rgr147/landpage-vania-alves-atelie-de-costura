@@ -21,7 +21,7 @@ function createItemsCarousel() {
     for (let i = 0; i < state.values.numberPhotosCarousel; i++) {
         const div = document.createElement('div');
         div.className = 'mes-versario-carousel-list-item';
-        div.style.backgroundImage = `url(./assets/img/mesversario-${i+1}.jpeg)`;
+        div.style.backgroundImage = `url(./assets/img/mesversario-${i+1}.png)`;
         fragment.appendChild(div);
     }
     state.view.carouselList.appendChild(fragment);
