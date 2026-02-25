@@ -10,13 +10,10 @@
     --text-soft: #4A4A4A;
     --gold: #B08D57;
     --gold-soft: #D9C7B0;
-
     --bg-mes-versario: black;
-
     --card: rgba(255, 255, 255, 0.78);
     --shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
     --radius: 14px;
-
     --space-1: 8px;
     --space-2: 14px;
     --space-3: 22px;
@@ -277,30 +274,33 @@ body::after {
 }
 
 .mes-versario-carousel-list-item:nth-child(1) { 
-    transform: translateX(-154%);
+    transform: translateX(calc(-154% + -330px));
+    height: 16rem;
+    margin-top: 30px;
 }
 
 .mes-versario-carousel-list-item:nth-child(2) {
-    z-index: 100;
+    transform: translateX(-154%);
+    height: 16rem;
+    margin-top: 30px;
 }
 
 .mes-versario-carousel-list-item:nth-child(3) {
-    transform: translateX(54%);
+
 }
 
 .mes-versario-carousel-list-item:nth-child(4) {
-    /* display: none;  */
-    transform: translateX(calc(54% + 480px));
-   
+    transform: translateX(54%);
+    height: 16rem;
+    margin-top: 30px;
 }
 .mes-versario-carousel-list-item:nth-child(5) {
-    /* display: none;  */
     transform: translateX(calc(54% + 480px));
-   
+    height: 16rem;
+    margin-top: 30px;
 }
 .mes-versario-carousel-list-item:nth-child(n+6):nth-last-child(n+1) {
     display: none; 
-    transform: translateX(calc(54% + 200px));
 }
 /*fim elementos do carrosel*/
 
@@ -472,10 +472,14 @@ body::after {
 
     .mes-versario-carousel-list-item:nth-child(1) { 
         transform: translateX(calc(-159% - 330px));
+        height: 70%;
+        margin-top: 35px;
     }
 
     .mes-versario-carousel-list-item:nth-child(2) {
         transform: translateX(-159%);
+        height: 70%;
+        margin-top: 35px;
     }
 
     .mes-versario-carousel-list-item:nth-child(3) {
@@ -483,10 +487,13 @@ body::after {
     }    
     .mes-versario-carousel-list-item:nth-child(4) {
         transform: translateX(59%);
+        height: 70%;
+        margin-top: 35px;
     }    
     .mes-versario-carousel-list-item:nth-child(5) {
         transform: translateX(calc(59% + 390px));
-
+        height: 70%;
+        margin-top: 35px;
     }    
     .mes-versario-carousel-list-item:nth-child(n+6):nth-last-child(n+1) {
         display: none;
