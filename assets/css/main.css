@@ -472,14 +472,14 @@ body::after {
 
     .mes-versario-carousel-list-item:nth-child(1) { 
         transform: translateX(calc(-159% - 330px));
-        height: 70%;
-        margin-top: 35px;
+        height: 60%;
+        margin-top: 50px;
     }
 
     .mes-versario-carousel-list-item:nth-child(2) {
         transform: translateX(-159%);
-        height: 70%;
-        margin-top: 35px;
+        height: 60%;
+        margin-top: 50px;
     }
 
     .mes-versario-carousel-list-item:nth-child(3) {
@@ -487,13 +487,13 @@ body::after {
     }    
     .mes-versario-carousel-list-item:nth-child(4) {
         transform: translateX(59%);
-        height: 70%;
-        margin-top: 35px;
+        height: 60%;
+        margin-top: 50px;
     }    
     .mes-versario-carousel-list-item:nth-child(5) {
         transform: translateX(calc(59% + 390px));
-        height: 70%;
-        margin-top: 35px;
+        height: 60%;
+        margin-top: 50px;
     }    
     .mes-versario-carousel-list-item:nth-child(n+6):nth-last-child(n+1) {
         display: none;
