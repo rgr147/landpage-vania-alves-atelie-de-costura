@@ -1,4 +1,3 @@
-Link para acessar o página desse projeto: https://vaniaalvesatelie.com.br/
 # Vânia Alves Ateliê de Costura 🪡
 
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
@@ -29,15 +28,6 @@ O projeto está no ar e pode ser visualizado no link abaixo:
     *   Suporte a **Gestos de Toque** (Swipe) para mobile.
     *   Proteção básica contra download de imagens (desabilita clique direito e drag-and-drop).
 
-## ✨ Funcionalidades
-
-*   **Seção Hero:** Apresentação visual com foco em noivas e botões de ação.
-*   **Carrossel de Mesversário:**
-    *   Transição automática de slides.
-    *   Barra de progresso visual indicando o tempo de troca.
-    *   Navegação por setas ou deslizando o dedo na tela (touch events).
-*   **CTAs Inteligentes:** Botões "Tire suas dúvidas" e "Saber Mais" com links diretos para a API do WhatsApp, já com mensagens pré-definidas.
-*   **Responsividade:** Layout fluido que se adapta desde telas pequenas (como iPhone SE/15) até monitores desktop.
 
 ## 🚀 Como executar localmente
 
