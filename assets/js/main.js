@@ -5,15 +5,33 @@ const state = {
         carousel: document.querySelector('.mes-versario-carousel'),
         carouselList: document.querySelector('.mes-versario-carousel-list'),
         carouselItem: document.querySelectorAll('.mes-versario-carousel-list-item'),
+        runnigbar: document.getElementById('bar'),
     },
     values: {
         touchStartX: 0,
         touchEndX: 0,
         numberPhotosCarousel: 10,
+        timeRunning: 3000,
+        timeAutoNext: 7000,
     },
 }
 
-createItemsCarousel();
+function loopBar() {
+    const bar = document.getElementById('bar');
+
+    if(bar.className === 'running-bar') {
+        bar.className = 'running-bar-inverse';
+    } else {
+        bar.className = 'running-bar';
+    }
+}
+
+function runCarousel() {
+    console.log(state.view.runnigbar);
+    setInterval(loopBar, state.values.timeAutoNext);
+    setInterval(showNextPhoto, state.values.timeAutoNext,'next' ,state.view.carouselList)
+}
+
 
 /*função responsável por adicionar fotos no carrosel do mes-versario */
 function createItemsCarousel() {
@@ -42,10 +60,7 @@ state.view.btnPrev.addEventListener('click', () =>
 /*função botão next para mostrar próxima foto no carrosel do mes-versario */
 function showNextPhoto(type, list) {
     if (type === 'next') {
-        // console.log(list)
-        // console.log(list.children[0])
         state.view.carouselList.appendChild(list.children[0])
-        // state.view.list.appendChild(list[0])
     }
 }
 
@@ -97,3 +112,10 @@ document.addEventListener('dragstart', (event) => {
     }
 });
 /*fim proteção básica de imagens*/
+
+
+function init() {
+    createItemsCarousel(); //chamando função responsável por gerar os itens do carrosel com fotos
+    runCarousel() //chamando função responsável por fazer o carrosel girar automaticamente
+}
+init();

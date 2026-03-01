@@ -263,6 +263,7 @@ body::after {
     width: 18rem;
     height: 20rem;
     position: absolute;
+    margin-top: var(--space-2);
     left: 50%;
     transform: translateX(-50%);
     background-size: contain;
@@ -281,8 +282,8 @@ body::after {
 
 .mes-versario-carousel-list-item:nth-child(2) {
     transform: translateX(-154%);
-    height: 16rem;
-    margin-top: 30px;
+    height: 15rem;
+    margin-top: 50px;
 }
 
 .mes-versario-carousel-list-item:nth-child(3) {
@@ -291,8 +292,8 @@ body::after {
 
 .mes-versario-carousel-list-item:nth-child(4) {
     transform: translateX(54%);
-    height: 16rem;
-    margin-top: 30px;
+    height: 15rem;
+    margin-top: 50px;
 }
 .mes-versario-carousel-list-item:nth-child(5) {
     transform: translateX(calc(54% + 480px));
@@ -366,6 +367,50 @@ body::after {
     animation-fill-mode: backwards;
 }
 /*fim botoes de next e prev carrosel*/
+
+/*barra de transição das fotos do carrosel*/
+.running-bar {
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background-color: var(--gold);
+    left: 0;
+    top: 0;
+    animation: runningBar 7s linear forwards;
+}
+
+.running-bar-inverse {
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background-color: var(--gold);
+    right: 0;
+    top: 0;
+    animation: runningBarInverse 7s linear forwards;
+}
+
+@keyframes runningBar {
+    from {
+        width: 0;
+
+
+    } 
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes runningBarInverse {
+    from {
+        width: 100%;
+    } 
+    to {
+        width: 0;
+    }
+}
+
+/*fim barra de transição das fotos do carrosel*/
+
 
 
 .mes-versario-cta {
@@ -506,7 +551,7 @@ body::after {
           width: 100%;
           justify-content: center;
     }
-
+    
     .btn-carousel {
         background-color: #fff;
         color: #777;
