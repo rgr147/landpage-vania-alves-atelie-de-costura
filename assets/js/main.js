@@ -17,16 +17,11 @@ const state = {
 }
 
 function loopBar() {
-    console.log('antes do if else');
     const bar = state.view.runningBar;
-    console.log(state.view.runningBar);
+
     if(bar.className === 'running-bar') {
         bar.className = 'running-bar-inverse';
-        console.log('dentro do if');
-        console.log(state.view.runningBar);
     } else {
-        console.log('dentro do else');
-        console.log(state.view.runningBar);
         bar.className = 'running-bar';
     }
 }
