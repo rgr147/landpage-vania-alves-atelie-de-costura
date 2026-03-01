@@ -41,3 +41,7 @@ O projeto está no ar e pode ser visualizado no link abaixo:
 ---
 
 Desenvolvido para Vânia Alves Ateliê.
+
+## Licença
+
+Este projeto está licenciado sob a Licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
